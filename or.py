@@ -21,13 +21,13 @@ def summer(list1, list2):
         return functools.reduce(lambda sum_, pair: sum_+pair[0]*pair[1],
                                 0, zip(list1, list2)              
                                 )
-
+"""
 def summer(list1, list2):#calculate sum of weights and data (main conception of neuro)
         summa = 0.0;
         for i in range(len(list1)):
                 summa+=list1[i]*list2[i]
         return summa
-
+"""
 def perceptron(data,answers,num):
         errors = [] #errors list to make a plot
         learning_level = 0.1 #level of learning (accuracy)
