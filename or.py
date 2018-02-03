@@ -15,6 +15,13 @@ def gui_interface(errors,weights):# Here we construct our graph of errors
         plt.plot(errors)
         plt.show()
 
+def summer(list1, list2):
+        if len(list1)!=len(list2):
+                raise ValueError('Sequences should have same length')
+        return functools.reduce(lambda sum_, pair: sum_+pair[0]*pair[1],
+                                0, zip(list1, list2)              
+                                )
+
 def summer(list1, list2):#calculate sum of weights and data (main conception of neuro)
         summa = 0.0;
         for i in range(len(list1)):
@@ -67,4 +74,5 @@ class TestPerceptronMethods(unittest.TestCase):
                 self.assertTrue(sum(weights)<=num_of_iterations and sum(weights)>=num_of_iterations*(-1))
                 
 if __name__ == "__main__":
+        main()
         unittest.main()
